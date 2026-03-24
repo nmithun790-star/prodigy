@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Local Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-left">
+      <h1>My Local Store</h1>
+    </div>
+
+    <!-- Cart Button -->
+    <button id="cart-toggle-btn" class="cart-button">
+      Cart (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="container">
+
+    <!-- Products Section -->
+    <section class="products">
+      <h2>Products</h2>
+
+      <!-- Search + Filter bar -->
+      <div class="product-toolbar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search products..."
+        />
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Beauty">Beauty</option>
+          <option value="Footwear">Footwear</option>
+        </select>
+      </div>
+
+      <div id="product-list" class="product-grid">
+        <!-- Products will be injected by script.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full-screen Cart Dashboard -->
+  <div id="cart-overlay" class="cart-overlay">
+    <div class="cart-page">
+      <div class="cart-page-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-cart-btn">✕</button>
+      </div>
+
+      <div class="cart-content">
+        <!-- Left: Shopping cart items -->
+        <div class="cart-main">
+          <h3>Shopping Cart</h3>
+          <div id="cart-items"></div>
+        </div>
+
+        <!-- Right: Order summary -->
+        <aside class="cart-summary">
+          <h3>Order Summary</h3>
+          <p id="summary-count">Items: 0</p>
+          <h3 id="cart-total">Total: ₹0</h3>
+          <button id="checkout-btn">Checkout</button>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Store Location: vijanagar,Mysore</p>
+    <p>Contact: 98765 43210</p>
+    <p style="margin-top:10px; font-weight:bold;">
+      Developed by Mithun N
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
